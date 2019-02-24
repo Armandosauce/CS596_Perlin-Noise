@@ -308,7 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapWidthInTiles: 12
   mapDepthInTiles: 12
-  tilePrefab: {fileID: 1650390741937098, guid: 2d74f93ed6b8f8b44a06b97804627c1c, type: 2}
+  tilePrefab: {fileID: 1466317607616522, guid: cd2d11b6fbbe5ae4b9f87491a32156b2, type: 2}
 --- !u!1 &1268387770
 GameObject:
   m_ObjectHideFlags: 0

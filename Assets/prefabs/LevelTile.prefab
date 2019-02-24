@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 64693153673457564}
   - component: {fileID: 23495932126143134}
   - component: {fileID: 114985983838012498}
-  - component: {fileID: 114620883256533352}
+  - component: {fileID: 114864400443656248}
   m_Layer: 0
-  m_Name: Level
+  m_Name: LevelTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,7 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114620883256533352
+--- !u!114 &114864400443656248
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -110,20 +110,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01a8b7e629b0a3a4c8318502c2b0ad97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noiseMapGeneration: {fileID: 0}
-  tileRenderer: {fileID: 0}
-  meshFilter: {fileID: 0}
-  meshCollider: {fileID: 0}
-  levelScale: 0
-  terrainTypes: []
-  heightMultiplier: 0
+  noiseMapGeneration: {fileID: 114985983838012498}
+  tileRenderer: {fileID: 23495932126143134}
+  meshFilter: {fileID: 33387971520807898}
+  meshCollider: {fileID: 64693153673457564}
+  levelScale: 5
+  terrainTypes:
+  - name: DungeonFloor
+    height: 0.2
+    color: {r: 0.19117647, g: 0.1392137, b: 0.0028114214, a: 0}
+  - name: water
+    height: 0
+    color: {r: 0.1852852, g: 0.009731843, b: 0.44117647, a: 0}
+  - name: Rock
+    height: 0.3
+    color: {r: 0.5588235, g: 0.5588235, b: 0.5588235, a: 0}
+  heightMultiplier: 5
   heightCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0.0062561035
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.5468114
+      value: 0.09706523
+      inSlope: 0.737533
+      outSlope: 0.737533
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0.5750046
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
-  waves: []
+    m_RotationOrder: 0
+  waves:
+  - seed: 2020
+    frequency: 1
+    amplitude: 1
+  - seed: 3512
+    frequency: 0.8
+    amplitude: 4
+  - seed: 9002
+    frequency: 0.4
+    amplitude: 7
 --- !u!114 &114985983838012498
 MonoBehaviour:
   m_ObjectHideFlags: 1
