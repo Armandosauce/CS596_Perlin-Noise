@@ -191,6 +191,7 @@ GameObject:
   - component: {fileID: 824274614}
   - component: {fileID: 824274619}
   - component: {fileID: 824274618}
+  - component: {fileID: 824274620}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -288,34 +289,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77cace4827e520c44bde6c8984451df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1125068605
-GameObject:
+--- !u!114 &824274620
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1125068606}
-  m_Layer: 0
-  m_Name: checkGround
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1125068606
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1125068605}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1405938717}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 824274613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ba90c5dacdd6004092586f08bb599b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapWidthInTiles: 12
+  mapDepthInTiles: 12
+  tilePrefab: {fileID: 824274613}
 --- !u!1 &1268387770
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,8 +479,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3.69, z: -4.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1125068606}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -509,14 +495,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  jumpHeight: 10
+  jumpHeight: 3
   turnSpeed: 2
-  distToGround: 0.2
   gravity: -9.81
-  ground:
-    serializedVersion: 2
-    m_Bits: 1
-  checkGround: {fileID: 1125068606}
+  YcamOffset: 0.5
+  cam: {fileID: 1268387773}
 --- !u!143 &1405938720
 CharacterController:
   m_ObjectHideFlags: 0

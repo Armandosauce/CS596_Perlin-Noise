@@ -7,41 +7,30 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     public float jumpHeight;
     public float turnSpeed;
-    public float distToGround;
     public float gravity;
-    public LayerMask ground;
-    public Transform checkGround;
-
+    public float YcamOffset;
+    public Camera cam;
+    
     private CharacterController _controller;
     private Vector3 _movement;
     private Vector3 _velocity;
-    private bool _isGrounded;
-    private bool _jump;
 
     void Start()
     {
         _controller = GetComponent<CharacterController>();
-        
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        resetPlayer();
         readInput();
         movePlayer();
+        updateCamera();
     }
-
-    void resetPlayer()
-    {
-        _isGrounded = Physics.CheckSphere(checkGround.position, distToGround, ground, QueryTriggerInteraction.Ignore);
-        if (_isGrounded && _velocity.y < 0)
-        {
-            _velocity.y = 0f;
-        }
-    }
+    
     void readInput()
     {
         _movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        
     }
 
     void movePlayer()
@@ -52,9 +41,20 @@ public class PlayerController : MonoBehaviour {
             this.transform.forward = _movement;
         }
         
+        if(Input.GetButtonDown("Jump"))
+        {
+            _velocity.y += Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
         _velocity.y += gravity * Time.deltaTime;
         _controller.Move(_velocity * Time.deltaTime);
 
+    }
+
+    private void updateCamera()
+    {
+        cam.transform.position = this.transform.position;
+        cam.transform.position += new Vector3(0, YcamOffset, 0);
     }
     
 }
