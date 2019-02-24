@@ -116,16 +116,16 @@ MonoBehaviour:
   meshCollider: {fileID: 64693153673457564}
   levelScale: 5
   terrainTypes:
-  - name: DungeonFloor
-    height: 0.2
-    color: {r: 0.19117647, g: 0.1392137, b: 0.0028114214, a: 0}
   - name: water
-    height: 0
-    color: {r: 0.1852852, g: 0.009731843, b: 0.44117647, a: 0}
-  - name: Rock
     height: 0.3
+    color: {r: 0.1852852, g: 0.009731843, b: 0.44117647, a: 0}
+  - name: DungeonFloor
+    height: 0.5
+    color: {r: 0.25735295, g: 0.19700812, b: 0, a: 0}
+  - name: Rock
+    height: 0.8
     color: {r: 0.5588235, g: 0.5588235, b: 0.5588235, a: 0}
-  heightMultiplier: 5
+  heightMultiplier: 6
   heightCurve:
     serializedVersion: 2
     m_Curve:
@@ -142,8 +142,8 @@ MonoBehaviour:
       outSlope: 0.737533
       tangentMode: 0
     - serializedVersion: 2
-      time: 1
-      value: 0.5750046
+      time: 0.9874959
+      value: 0.6397498
       inSlope: 2
       outSlope: 2
       tangentMode: 0
@@ -155,11 +155,11 @@ MonoBehaviour:
     frequency: 1
     amplitude: 1
   - seed: 3512
-    frequency: 0.8
-    amplitude: 4
+    frequency: 0.2
+    amplitude: 8
   - seed: 9002
-    frequency: 0.4
-    amplitude: 7
+    frequency: 0.25
+    amplitude: 15
 --- !u!114 &114985983838012498
 MonoBehaviour:
   m_ObjectHideFlags: 1
