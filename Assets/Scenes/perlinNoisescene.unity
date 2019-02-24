@@ -181,7 +181,8 @@ Transform:
 --- !u!1 &824274613
 GameObject:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 1466317607616522, guid: cd2d11b6fbbe5ae4b9f87491a32156b2,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
@@ -202,7 +203,8 @@ GameObject:
 --- !u!23 &824274614
 MeshRenderer:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 23495932126143134, guid: cd2d11b6fbbe5ae4b9f87491a32156b2,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 824274613}
   m_Enabled: 1
@@ -236,7 +238,8 @@ MeshRenderer:
 --- !u!64 &824274615
 MeshCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 64693153673457564, guid: cd2d11b6fbbe5ae4b9f87491a32156b2,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 824274613}
   m_Material: {fileID: 0}
@@ -250,14 +253,16 @@ MeshCollider:
 --- !u!33 &824274616
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 33387971520807898, guid: cd2d11b6fbbe5ae4b9f87491a32156b2,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 824274613}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &824274617
 Transform:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 4769239235039834, guid: cd2d11b6fbbe5ae4b9f87491a32156b2,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 824274613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -281,7 +286,8 @@ MonoBehaviour:
 --- !u!114 &824274619
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 114985983838012498, guid: cd2d11b6fbbe5ae4b9f87491a32156b2,
+    type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 824274613}
   m_Enabled: 1
@@ -302,7 +308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapWidthInTiles: 12
   mapDepthInTiles: 12
-  tilePrefab: {fileID: 824274613}
+  tilePrefab: {fileID: 1650390741937098, guid: 2d74f93ed6b8f8b44a06b97804627c1c, type: 2}
 --- !u!1 &1268387770
 GameObject:
   m_ObjectHideFlags: 0

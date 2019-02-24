@@ -23,8 +23,7 @@ GameObject:
   - component: {fileID: 64693153673457564}
   - component: {fileID: 23495932126143134}
   - component: {fileID: 114985983838012498}
-  - component: {fileID: 114508712069467884}
-  - component: {fileID: 114894688835792544}
+  - component: {fileID: 114620883256533352}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -100,7 +99,7 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114508712069467884
+--- !u!114 &114620883256533352
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -108,23 +107,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1466317607616522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 01a8b7e629b0a3a4c8318502c2b0ad97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114894688835792544
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1466317607616522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ba90c5dacdd6004092586f08bb599b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mapWidthInTiles: 12
-  mapDepthInTiles: 12
-  tilePrefab: {fileID: 1650390741937098, guid: 2d74f93ed6b8f8b44a06b97804627c1c, type: 2}
+  noiseMapGeneration: {fileID: 0}
+  tileRenderer: {fileID: 0}
+  meshFilter: {fileID: 0}
+  meshCollider: {fileID: 0}
+  levelScale: 0
+  terrainTypes: []
+  heightMultiplier: 0
+  heightCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  waves: []
 --- !u!114 &114985983838012498
 MonoBehaviour:
   m_ObjectHideFlags: 1
