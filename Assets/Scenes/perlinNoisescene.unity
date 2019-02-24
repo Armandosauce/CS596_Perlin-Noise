@@ -428,9 +428,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  jumpHeight: 3
+  jumpHeight: 20
   turnSpeed: 2
-  gravity: -9.81
+  gravity: 20
   YcamOffset: 0.5
   cam: {fileID: 1268387773}
 --- !u!143 &1405938720

@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour {
         _controller = GetComponent<CharacterController>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         readInput();
         movePlayer();
@@ -35,7 +35,6 @@ public class PlayerController : MonoBehaviour {
 
     void movePlayer()
     {
-        _controller.Move(_movement * Time.deltaTime * speed);
         if(_movement != Vector3.zero)
         {
             this.transform.forward = _movement;
@@ -43,11 +42,11 @@ public class PlayerController : MonoBehaviour {
         
         if(Input.GetButtonDown("Jump"))
         {
-            _velocity.y += Mathf.Sqrt(jumpHeight * -2f * gravity);
+            _movement.y += jumpHeight;
         }
 
-        _velocity.y += gravity * Time.deltaTime;
-        _controller.Move(_velocity * Time.deltaTime);
+        _movement.y -= gravity * Time.deltaTime;
+        _controller.Move(_movement * Time.deltaTime * speed);
 
     }
 
