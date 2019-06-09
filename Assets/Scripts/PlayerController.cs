@@ -40,10 +40,6 @@ public class PlayerController : MonoBehaviour {
             this.transform.forward = _movement;
         }
         
-        if(Input.GetButtonDown("Jump"))
-        {
-            _movement.y += jumpHeight;
-        }
 
         _movement.y -= gravity * Time.deltaTime;
         _controller.Move(_movement * Time.deltaTime * speed);
